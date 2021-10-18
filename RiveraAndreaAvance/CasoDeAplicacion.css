@@ -1,0 +1,65 @@
+.grid {
+    margin: 0px auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns:200% ;
+    grid-template-rows: 1fr 100px 50px;
+    grid-template-areas: "nav" "contenido" "aside" "foot";
+}
+
+nav {
+    grid-area:nav;
+    background-color: grey;
+}
+
+section {
+    grid-area: contenido;
+    background-color: peru;
+}
+
+aside {
+    grid-area: aside;
+    background-color:powderblue;
+}
+
+footer {
+    grid-area: foot;
+    background-color: pink;
+}
+
+ol {
+    list-style: none;
+}
+
+#I1 {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+#I2 {
+    width: 100px;
+    height:100px;
+    float: left;
+}
+
+#I3 {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+@media (min-width: 600px) and (max-width: 1000px){
+    .grid{
+        grid-template-columns: 70% 70%;
+        grid-template-rows: 200px 1fr 100px;
+        grid-template-areas: "nav nav aside aside contenido contenido" "foot foot";
+    }
+}
+
+@media (min-width: 1001px) {
+    .grid {
+        grid-template-columns:200px 1fr 200px;
+        grid-template-rows: 100px 1fr 100px;
+        grid-template-areas: "nav contenido aside" "foot foot foot";
+    }
+}
